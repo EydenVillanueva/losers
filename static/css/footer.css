@@ -1,0 +1,69 @@
+footer{
+    width: 100%;
+    background: #6b77a0;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+}
+
+footer .sobre_mi{
+    width: 55%;
+    color: #fff;
+    padding: 35px;
+}
+
+footer .sobre_mi p{
+    font-size: 15px;
+    font-style: oblique;
+}
+
+footer .sobre_mi .sobre_mi_encabezado{
+    margin-bottom: 30px;
+    font-size: 25px;
+    font-weight: 200;
+    font-style: oblique;
+}
+
+footer .sigueme{
+    width: 45%;
+    color: #fff;
+    padding: 20px;
+}
+
+footer .sigueme_encabezado{
+    margin-bottom: 30px;
+    font-size: 25px;
+    font-weight: 200;
+    font-style: oblique;
+}
+
+footer .sigueme a{
+    color: #fff;
+    text-decoration: underline;
+    padding: 30px;
+}
+
+@media screen and (max-width: 750px){
+    footer{
+        flex-direction: column;
+        height: auto;
+        margin-top: 100px;
+    }
+    footer .sobre_mi{
+        width: 100%;
+        text-align: center;
+        padding: 25px;
+    }
+    footer .sigueme{
+        width: 100%;
+        text-align: center;
+    }
+
+    footer .sobre_mi .sobre_mi_encabezado{
+        font-size: 22px;
+    }
+
+}

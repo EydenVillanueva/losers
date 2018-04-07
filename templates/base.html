@@ -1,0 +1,55 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'fonts/font-awesome/css/font-awesome.min.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Patua+One" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/init.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/botones.css' %}">
+    {% block links_templates %}
+    {% endblock links_templates %}
+
+    <title>{% block titulo %}{% endblock titulo %}</title>
+</head>
+<body>
+    <header class="navegacion">
+        <!-- Logo-->
+        <div class="contenedor_imagen_header">
+            <a href=""><img class="imagen_header" src="{% static 'img/logo.jpg' %}" alt=""></a>
+        </div>
+        <!-- nav -->
+        <nav class="menu">
+            <a href="" class="enlaces_menu">Inicio</a>
+            <a href="" class="enlaces_menu">Contacto</a>
+            <a href="" class="enlaces_menu">Reseñas</a>
+            <a href="" class="enlaces_menu">Conóceme</a>
+        </nav>
+    </header>
+    <main class="principal">
+        {% block contenido %}
+          
+        {% endblock contenido %}
+    </main>
+    <footer>
+        <div class="sobre_mi">
+            <h4 class="sobre_mi_encabezado">Este solo es un Footer mas</h4>
+            <p class="motivaciones">"Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts."</p>
+        </div>
+        <div class="sigueme">
+            <h5 class="sigueme_encabezado">Sígueme</h5>
+            <a href="https://www.facebook.com/eydenv"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+            <a href="https://github.com/EydenVillanueva"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+        </div>
+    </footer>
+
+    {% block scripts_extra %}
+      
+    {% endblock scripts_extra %}
+    
+</body>
+</html>

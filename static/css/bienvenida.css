@@ -1,0 +1,35 @@
+/*
+    fondo: #FBFAF8
+    fondo_header: #576CA8
+    #302b27
+*/
+/*background: url("../img/derry.png");*/
+.contenedor_bienvenida{
+    background: #e6e9f3;
+    /*background: url("../img/derry.jpg");*/
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+}
+
+.bienvenida{
+    padding: 30px;
+    margin: 0px auto;
+}
+
+.bienvenida h2{
+    color: #576CA8;
+    transition: font-size 1s; 
+    -webkit-transition: font-size 1s; /* Safari */
+}
+
+.bienvenida h2:hover{
+    font-size: 32px;
+    -webkit-transition: font-size 1s; /* Safari */
+    transition: font-size 1s;
+}
+
+

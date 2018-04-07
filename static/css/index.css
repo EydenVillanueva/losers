@@ -1,0 +1,92 @@
+/*
+    MAIN
+*/
+.principal{
+    margin: 50px auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.principal .articulo{
+    background: #a5b0ce;
+    width: 30%;
+    height: 220px;
+    margin: 20px;
+    border-radius: 15px;
+}
+
+
+.principal .articulo .articulo_encabezado{
+    background: #576CA8;
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 15px;
+    color: #fff;
+    overflow: hidden;
+    text-align: center;
+    transition: background 1s; 
+    -webkit-transition: background 1s; /* Safari */
+}
+
+.principal .articulo .articulo_encabezado:hover{
+    background: #608ecafb;
+    transition: background 0.5s; 
+    -webkit-transition: background 0.5s; /* Safari */
+    cursor: pointer;
+}
+
+
+
+.principal .articulo .articulo_encabezado .articulo_titulo{
+    font-size: 20px;
+}
+
+.principal .articulo .articulo_encabezado .articulo_fecha{
+    font-size: 15px;
+}
+
+.principal .articulo .articulo_cuerpo{
+    color: #fff;
+    font-size: 15px;
+    padding: 5px 10px;
+    overflow: hidden;
+}
+
+
+
+
+
+/*
+    MEDIA QUERIES
+*/
+@media screen and (max-width: 1215px){
+    .principal .articulo{
+        width: 40%;
+        margin: 20px auto;
+        
+    }
+}
+
+@media screen and (max-width: 770px){
+
+    .principal{
+        flex-direction: column;
+    }
+
+    .principal .articulo{
+        width: 70%;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+
+    .principal .articulo{
+        width: 80%;
+    }
+
+}
+
+

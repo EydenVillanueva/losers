@@ -1,0 +1,31 @@
+.boton{
+    width: 120px;
+    padding: 10px 15px;
+    background: #8491af;
+    color: #fff;
+    border-radius: 7px;
+    transition: background .4s; 
+    -webkit-transition: background .4s; /* Safari */;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 9px #7581a3;
+}
+
+.boton:hover{
+    background: #7c8bb4;
+    box-shadow: 0 9px #717fa7;
+    transition: background .4s; 
+    -webkit-transition: background .4s; /* Safari */
+}
+
+.boton:active{
+    box-shadow: 0 9px #596891;
+    transform: translateY(4px);
+}
+
+.mediano{
+    width: 200px;
+    padding: 15px 20px;
+}
+

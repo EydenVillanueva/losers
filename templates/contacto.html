@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+{% block links_templates %}
+<link rel="stylesheet" href="{% static 'css/contacto.css' %}">
+{% endblock links_templates %}
+
+{% block titulo %}Contacto{% endblock titulo %}
+
+{% block contenido %}
+    <div class="contactame">
+        <h1>Contáctame</h1>
+    </div>
+    <div class="formulario">
+        <form action="{% url 'contacto' %}" class="formulario_contacto" method="post">
+            {% csrf_token %}
+            {{formulario.nombre}}
+            {{formulario.correo}}
+            {{formulario.mensaje}}
+            <input type="submit" value="Enviar" class="boton">
+        </form>
+    </div>
+{% endblock contenido %}
+
+
+{% block scripts_extra %}
+      
+{% endblock scripts_extra %}
+
+

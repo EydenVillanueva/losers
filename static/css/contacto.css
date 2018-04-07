@@ -1,0 +1,80 @@
+.principal{
+    width: 100%;
+    margin: 70px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.principal .contactame{
+    width: 50%;
+    margin: 0px auto;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.principal .contactame h1{
+    color: #576CA8;
+    font-weight: 100; 
+}
+
+.principal .formulario{
+    width: 85%;
+    margin: 0px auto;
+}
+
+.principal .formulario .formulario_contacto{
+    width: 100%;
+    background: #f8f3f3;
+    padding: 40px 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.principal .formulario .formulario_contacto input[type="text"]{
+    padding: 15px 25px;
+    width: 49%;
+    margin: 10px auto;
+}
+
+.principal .formulario .formulario_contacto textarea{
+    width: 100%;
+    height: 100px;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 150px;
+    max-height: 300px;
+    margin-bottom: 15px;
+    padding: 10px 25px;  
+}
+
+.principal .formulario .formulario_contacto input[type="text"],
+.principal .formulario .formulario_contacto textarea
+{
+    border: 2px solid #a3adc0e1;
+    font-size: 18px;
+    color: #a4a4a4;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 650px){
+    .principal .formulario{
+        width: 85%;
+        /*margin: 10px auto;*/
+    }
+    .principal .formulario .formulario_contacto{
+        padding: 10px;
+    }
+
+    .principal .formulario .formulario_contacto input[type="text"]{
+        width: 49%;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .principal .contactame{display: inline-block;}
+    .principal .formulario{width: 100%;}
+    .principal .formulario .formulario_contacto{flex-direction: column;}
+    .principal .formulario .formulario_contacto input[type="text"]{width: 100%;}
+    .principal .contactame{text-align: center;}
+}

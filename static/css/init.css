@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    min-height: 100%;
+    position: relative;
+}
+
+h1,h2,h3{
+    font-family: 'Patua One', cursive;
+}
+
+
+h1{font-size: 37px;}
+h2{font-size: 30px;}
+h3{font-size: 22px;}
+
+a{text-decoration: none;}
+a:hover{color: #fff !important;text-decoration: none !important;}
+
+input[type="text"],textarea,input[type="submit"]{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 17px;
+}
+
+body{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 20px;
+    background:  #FBFAF8;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 450px;
+}
