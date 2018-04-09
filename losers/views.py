@@ -5,8 +5,15 @@ from publicaciones.models import Publicacion
 from django.core.mail import send_mail
 from .forms import FormContacto
 
-def index(request):
-    return HttpResponse("Hola Mundo")
+def inicio(request):
+    
+    publicaciones = Publicacion.objects.all()
+
+    contexto = {
+        'publicaciones': publicaciones
+    }
+
+    return render(request, 'inicio.html',contexto)
 
 def contacto(request):
     
@@ -33,4 +40,8 @@ def contacto(request):
     contexto = {'formulario': formulario}
 
     return render(request, 'contacto.html',contexto)
+
+def sobremi(request):
+
+    return render(request, 'sobremi.html',{})
         

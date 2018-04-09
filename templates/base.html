@@ -20,16 +20,17 @@
     <header class="navegacion">
         <!-- Logo-->
         <div class="contenedor_imagen_header">
-            <a href=""><img class="imagen_header" src="{% static 'img/logo.jpg' %}" alt=""></a>
+            <a href="{% url 'inicio' %}"><img class="imagen_header" src="{% static 'img/logo.jpg' %}" alt=""></a>
         </div>
         <!-- nav -->
         <nav class="menu">
-            <a href="" class="enlaces_menu">Inicio</a>
-            <a href="" class="enlaces_menu">Contacto</a>
+            <a href="{% url 'inicio' %}" class="enlaces_menu">Inicio</a>
+            <a href="{% url 'contacto' %}" class="enlaces_menu">Contacto</a>
             <a href="" class="enlaces_menu">Reseñas</a>
-            <a href="" class="enlaces_menu">Conóceme</a>
+            <a href="{% url 'sobremi' %}" class="enlaces_menu">Conóceme</a>
         </nav>
     </header>
+    {% block contenedor_entra %}{% endblock contenedor_entra %}
     <main class="principal">
         {% block contenido %}
           

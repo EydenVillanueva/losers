@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+{% block links_templates %}
+<link rel="stylesheet" href="{% static 'css/sobremi.css' %}">
+{% endblock links_templates %}
+
+{% block titulo %}Sobre Mi{% endblock titulo %}
+
+{% block contenido %}
+    <div class="contenedor_imagen">
+        <img class="imagen" src="{% static 'img/yo.jpg' %}" alt="">
+    </div>
+    <div class="contenedor_conoceme">
+        <h1 class="conoceme">Sobre Mí</h1>
+        <div class="contenedor_intro">
+            <p>
+                Me llamo Eyden, estudio ingeniería y este es mi espacio personal.
+            </p>
+            <p>
+                Soy gran aficionado al cine, a los libros, a la música y también a dar mi opinión acerca
+                de los temas que conozco. Soy una persona introvertida que disfruta de su propia compañia.
+                <span>"Quién no es buena compañia para si mismo, nunca lo será para los demás"</span>
+            </p>
+            <p>
+                Me sentiré bien en responder todos sus comentarios y en debatir acerca de mis opinones sobre 
+                libros y películas.
+            </p>
+        </div>
+    </div>
+{% endblock contenido %}

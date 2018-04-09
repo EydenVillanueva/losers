@@ -1,76 +1,82 @@
-.main{
+.principal{
     width: 100%;
     display: flex;
     flex-direction: row;
     margin: 100px auto;
 }
 
-.main .contenedor_imagen{
+.principal .contenedor_imagen{
     width: 30%;
 }
 
-.main .contenedor_imagen .imagen{
+.principal .contenedor_imagen .imagen{
     width: 70%;
     display: block;
     border-radius: 20px;
     margin: 20px auto;
 }
 
-.main .contenedor_conoceme{
+.principal .contenedor_conoceme{
     width: 70%;
     padding: 70px;
 }
 
-.main .contenedor_conoceme .conoceme{
+.principal .contenedor_conoceme .conoceme{
     font-weight: 100;
     color: #576CA8;
 }
 
-.main .contenedor_conoceme p{
+.principal .contenedor_conoceme p{
     font-size: 19px;
     line-height: 35px;
 }
 
-.main .contenedor_conoceme span{
+.principal .contenedor_conoceme span{
     font-style: oblique;
     color: #3b3b3be7;
 }
 
 @media screen and (max-width: 1000px){
-    .main{
+    .principal{
         flex-direction: column;
     }
 
-    .main .contenedor_imagen{
+    .principal .contenedor_imagen{
         width: 100%;
     }
 
-    .main .contenedor_imagen .imagen{
+    .principal .contenedor_imagen .imagen{
         width: 30%;
 
     }    
 
-    .main .contenedor_conoceme{
+    .principal .contenedor_conoceme{
         width: 100%;
     }
 
-    .main .contenedor_conoceme .conoceme{
+    .principal .contenedor_conoceme .conoceme{
         text-align: center;
     }
 
-    .main .contenedor_conoceme .contenedor_intro{
+    .principal .contenedor_conoceme .contenedor_intro{
         margin: 0px auto;
         padding: 30px;
     }
 }
 
 @media screen and (max-width: 500px){
-    .main .contenedor_conoceme p{
+    .principal{
+        margin-top: 20px;
+    }
+    .principal .contenedor_imagen .imagen{
+        width: 70%;
+    }
+    .principal .contenedor_conoceme p{
         font-size: 14px;
         line-height: 35px;
     }
 
-    .main .contenedor_conoceme{
+    .principal .contenedor_conoceme{
         padding: 34px;
     }
 }

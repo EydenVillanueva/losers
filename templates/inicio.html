@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block links_templates %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">  
+<link rel="stylesheet" href="{% static 'css/bienvenida.css' %}">  
+{% endblock links_templates %}
+
+{% block titulo %}Losers Club{% endblock titulo %}
+
+{% block contenedor_entra %}
+<section class="contenedor_bienvenida">
+    <div class="bienvenida">
+        <h2>Bienvenidos a mi Blog, Encontrarán Reseñas, Articulos y mis Opiniones</h2>
+    </div>
+</section>
+{% endblock contenedor_entra %}
+
+
+{% block contenido %}
+<main class="principal">
+    {% for publicacion in publicaciones %}
+    <article class="articulo">
+        <a href="">
+            <div class="articulo_encabezado">
+                <h4 class="articulo_titulo">{{publicacion.nombre}}</h4>
+                <span class="articulo_fecha">{{publicacion.fecha}}</span>
+            </div>
+            <div class="articulo_cuerpo">
+                <p>
+                    {{publicacion.contenido | truncatewords:30 }}
+                </p>
+            </div>
+        </a>
+    </article>
+    {% endfor %}
+  
+</main>
+{% endblock contenido %}
