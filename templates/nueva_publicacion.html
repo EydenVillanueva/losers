@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+{% block links_templates %}
+
+
+<link rel="stylesheet" href="{% static 'css/nueva_entrada.css' %}">
+
+{% endblock links_templates %}
+
+{% block titulo %}
+Nueva Entrada  
+{% endblock titulo %}
+
+
+{% block contenido %}
+    <div class="contenedor_editor" >
+        <form action="" id="formulario_editor">
+            <input type="text" name="" id="" placeholder="Titulo de La Entrada" class="titulo_entrada">
+
+            
+
+            <input type="submit" class="boton mediano" id="boton_enviar" value="Mostrar Resultados">
+        </form>
+    </div>
+
+    <div class="contenedor_resultado" id="contenedorResultado">
+
+    </div>
+{% endblock contenido %}
+
+
+{% block scripts_extra %}
+<script>
+    $(document).ready(function(){
+        $('#contenido_texto').Editor();
+
+        $('#boton_enviar').click(function(e){
+            e.preventDefault();
+            var texto = $('#contenido_texto').Editor('getText');
+            $('#contenedorResultado').html(texto);
+        });
+    });
+</script>
+{% endblock scripts_extra %}
+
+

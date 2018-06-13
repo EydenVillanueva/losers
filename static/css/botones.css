@@ -10,6 +10,7 @@
     cursor: pointer;
     border: none;
     box-shadow: 0 9px #7581a3;
+    outline: none;
 }
 
 .boton:hover{
