@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block links_templates %}
+<link rel="stylesheet" href="{% static 'css/entrada.css' %}">
+{% endblock links_templates %}
+
+
+{% block titulo %}
+    {{publicacion.nombre}}
+{% endblock titulo %}
+
+{% block contenido %}
+    <div class="contenedor_titulo_imagen">
+        <img src="{% media publicacion.imagen_fondo %}" alt="">-->
+        <div class="contenedor_titulo">
+            <h1>{{publicacion.nombre}}</h1>
+        </div>
+    </div>   
+    <div class="hidden" id="hidden">
+        {{publicacion.contenido}}
+    </div>
+    <div class="contenido" id="contenido"></div>
+{% endblock contenido %}
+
+
+
+{% block scripts_extra %}
+
+<script>
+    var publicacion = document.getElementById("hidden").innerText;
+    var $contenedor = $("#contenido");
+    html = $.parseHTML(publicacion);
+    $contenedor.append(html);
+
+    console.log("{{publicacion.imagen_fondo}}");
+</script>
+  
+{% endblock scripts_extra %}

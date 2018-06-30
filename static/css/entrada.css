@@ -5,6 +5,10 @@ main.principal{
     width: 100%;
 }
 
+.hidden{
+    display: none;
+}
+
 .contenedor_titulo_imagen{
     width: 100%;
     height: 280px;
