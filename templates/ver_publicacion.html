@@ -12,8 +12,8 @@
 
 {% block contenido %}
     <div class="contenedor_titulo_imagen">
-        <img src="{% media publicacion.imagen_fondo %}" alt="">-->
         <div class="contenedor_titulo">
+            <img src="{{publicacion.imagen_fondo.url}}" alt="">
             <h1>{{publicacion.nombre}}</h1>
         </div>
     </div>   
@@ -32,8 +32,6 @@
     var $contenedor = $("#contenido");
     html = $.parseHTML(publicacion);
     $contenedor.append(html);
-
-    console.log("{{publicacion.imagen_fondo}}");
 </script>
   
 {% endblock scripts_extra %}
